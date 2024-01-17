@@ -3,15 +3,12 @@ class Solution:
         pre = strs[0]
         
         for word in strs[1:]:
-            print(pre)
-            print(word)
+
             for ind,ch in enumerate(pre):
-                print(ind)
                 if(ind < len(word)):
                     if (pre[ind] == word[ind]):
                         continue
                     else:
-                        print('here')
                         pre = pre[:ind]
                         break
                 else:
