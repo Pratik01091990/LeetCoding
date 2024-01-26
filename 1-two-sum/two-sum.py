@@ -3,15 +3,15 @@ class Solution:
         l = 0
         r = 1
         length = len(nums)
-        while(r < length):
-            e_l = nums[l]
-            e_r = nums[r]
-            if ((e_l + e_r) == target):
-                return [l,r]
-            else:
-                r+=1
-                if(r == length):
-                    l+=1
+        while r < length:
+
+            if nums[l] + nums[r] != target:
+                r= r+1
+                if r == length:
+                    l = l+1
                     r = l+1
+
+            else:
+                return [l,r] 
                     
         return []
